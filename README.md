@@ -1,9 +1,12 @@
 # Custom Pulse browser theme
 
-Collapsible tab bar is dealed natively in Pulse.
+Collapsible tab bar is dealed natively in [Pulse](https://pulsebrowser.app/).
 So are sidebar and panels.
 
 Navbar is revealed on focus (Cmd+L or Ctrl+L)
+
+Theme is based on [Rosé Pine](https://rosepinetheme.com/)'s palette.
+Colors are currently hardcoded, I'll use variables for an easier customization.
 
 Collapsed tabs
 <img width="1668" alt="image" src="https://github.com/Dehelssey/MyPulse/assets/20315413/540046d3-d591-47d9-86e1-4172f13a94d1">
