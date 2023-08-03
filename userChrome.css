@@ -1,0 +1,123 @@
+body {
+  background: #faf4ed !important;
+}
+
+:root:not([customizing]) #navigator-toolbox{ display: grid; grid-template-rows: auto }
+:root:not([customizing]) #navigator-toolbox > *{ grid-area: 1/1; }
+:root:not([customizing]) #titlebar{ -moz-appearance: none !important; }
+
+#urlbar-container{ margin-top: 1px }
+:root[sessionrestored] #nav-bar:not([customizing]){
+  transform: rotateX(90deg);
+  transition: transform 67ms linear, opacity 0ms linear 67ms !important;
+  opacity: 0;
+  z-index: 3;
+  background: none !important;;
+}
+
+#urlbar-background {
+  background: #fff !important;
+  border: 1px solid #eb6f9242 !important;
+}
+:root[sessionrestored] #nav-bar:focus-within{
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition-delay: 0ms, 0ms !important;
+}
+
+#navigator-toolbox {
+  height: 0;
+  border: none;
+  background: none !important;
+}
+
+:root[sessionrestored] #navigator-toolbox:focus-within{
+  height: auto;
+}
+
+#appcontent {
+  order: 2 !important;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 8px 0;
+  border: 1px solid #eb6f9242 !important;
+}
+
+#sidebar-container {
+  order: 6 !important;
+  border-radius: 5px;
+  overflow: hidden;
+  background: none !important;
+  margin: 4px !important;
+}
+
+.tab-throbber-tabslist, .tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+#sidebar-box {
+  background: #f2e9e1 !important;
+  border-radius: 8px;
+  margin: 8px !important;
+  margin-right: 0 !important;
+}
+#TabsToolbar {
+  background: none !important;
+  border: none;
+  margin: 8px !important;
+}
+
+.sidebar-item-background[checked],
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon:-moz-lwtheme,
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme,
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwtheme {
+  background: #eb6f92 !important;
+  box-shadow: none;
+}
+.tabbrowser-tab:is([selected], [multiselected]):-moz-lwtheme,
+.sidebar-item-background[checked] .sidebar-icon-item {
+  color: #fffaf3 !important;
+}
+
+.sidebar-item-background,
+#TabsToolbar #firefox-view-button:not([open]) > .toolbarbutton-icon,
+.tabbrowser-tab > .tab-stack > .tab-background:not([selected="true"],
+[multiselected]){
+    transition: all .3s ease;
+}
+
+.sidebar-item-background:hover,
+#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon,
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"],
+[multiselected]){
+  background: #eb6f9242 !important;
+}
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+#tabbrowser-tabs:not([noshadowfortests]) .tab-background:is([selected],
+[multiselected]) {
+  box-shadow: none !important;
+}
+
+splitter {
+  background: none !important;
+  border: none !important;
+}
+
+#verticaltabs-splitter {
+  display: none;
+}
+
+#tabbrowser-tabs {
+  --tab-min-width: 0 !important;
+}
+
+.tab-close-button.close-icon {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.tabbrowser-tab:hover .tab-close-button.close-icon {
+  opacity: 1;
+}
